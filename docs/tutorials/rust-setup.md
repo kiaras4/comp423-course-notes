@@ -8,3 +8,6 @@
 --code here--
 \```
 ```
+!!! note
+
+    The above code block contains a / before the ``` for displaying purposes. The / will not be used in the actual code
