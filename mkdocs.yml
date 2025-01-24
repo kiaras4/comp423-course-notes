@@ -10,3 +10,8 @@ theme:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+  markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
