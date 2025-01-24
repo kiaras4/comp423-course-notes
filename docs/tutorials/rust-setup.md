@@ -6,4 +6,4 @@
 
 !!! note
 
-    Do not be overwhelmed!! Refer back to this tutorial if you get stuck.s
+    The above code block contains a / before the ``` for displaying purposes. The / will not be used in the actual code
