@@ -58,7 +58,9 @@ Let's start with creating the directory and initialize our Git repositiory.
 [comment]: (add-note-saying-instructions-inspired-from-423-MkDocs-Tutorial)  
 
 
-##Part 2: Development(Dev) Container Set Up and Configuration
+## Part 2: Development(Dev) Container Set Up and Configuration
+
+### Set-up
 
 1. Open the directory you created in VS Code.
     - Can be done like so: File > Open folder
@@ -69,5 +71,40 @@ Let's start with creating the directory and initialize our Git repositiory.
     .devcontainer/devcontainer.json
     ```
 
-3.
+### Configuration
+
+The devcontainer.json file you just created defines the configuration needed for your development environment. We will be adding the following specification:
+
+1. **name:** descriptive name for the dev container
+
+2. **image:** This specifies the Docker image to use. We will use one of Microsoft's base images of the latest version of a Rust environment.
+
+3. **customizations:** Adds important & useful configurations to VS Code, such as installing the Rust extension. Searching for VSCode extensions on the marketplace will bring up the string identifier of each extension in its sidebar. Adding extensions this way is important as it ensures other developers on your project will have those extensions installed in their own dev containers automatically. 
+
+    ```
+    {
+        "name": "Rust Hello World",
+        "image": "mcr.microsoft.com/vscode/devcontainers/rust:latest"
+        "customizations": {
+            "vscode": {
+                "settings": {},
+                "extensions": ["rust-analyzer"]
+            }
+        }
+    }
+    ```
+
+### Post-Configuration- Reopen Project in a VS Code Dev Container
+
+Here we will reopen the project in the container. You can do this by doing ``Ctrl+Shift+P`` (or ``Cmd+Shift+P`` on Mac), then type "Dev Containers: Reopen in Container," selecting the option once it comes up. The image will be downloaded and any requirements installed. It may take a few minutes.
+
+Once the setup is complete, close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``rustc --version`` to ensure the dev container is running a recent version of Rust. 
+
+
+## Part 3: The Hello World Program!
+
+
+
+
+
 
