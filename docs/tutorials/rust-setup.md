@@ -3,17 +3,6 @@
 * Primary author: [Kiara Smith](https://github.com/kiaras4)
 * Reviewer: [Krisha Malkan](https://github.com/kdmalkan/comp423-course-notes)
 
-
-```title="Example of Code block"
-```<code tag> title="optional title"
---code here--
-\```
-```
-!!! note
-
-    The above code block contains a / before the ``` for displaying purposes. The / will not be used in the actual code
-
-
 **Welcome!** This is the tutorial for creating a basic "Hello, COMP423!" using Rust.
 
 ## Prerequisites:
@@ -192,21 +181,23 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
     You should see this output, or something similar:
 
     ```
-    Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
+    Compiling hello_cargo v0.1.0 (file:///projects/hello_comp423)
     Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs
     ```
 
-    This creates an executable file in target/debug/hello_comp423(or target/debug/hello_comp423.exe on windows). This can also be referred to 
+    This creates an executable file in target/debug/hello_comp423 (or target/debug/hello_comp423.exe on windows). It works similarly to using gcc to compile and link a C program:
+    
+     ```
+     gcc -o hello_comp423 hello_comp423.c
+     ```
+     
+     Both create an executable file that can be run. In the gcc command, you specify the file to be compiled, ``hello_comp423.c``, and names the executable, ``hello_comp423``. The ``-o`` is what allows you to name the executable something other than a.out. On the other hand, Cargo manages the project, so it is able to automatically compile the source files. Cargo's process creates an executable with the same name as the project.
 
-    To run the compiled source files, run:
+    To run the compiled source files(executable), run:
 
     ```
     ./target/debug/hello_comp423 
     ```
-
-    [comment]:(check-if-the-above-command-is-correct-or-if-it's-just-"./hello-comp423"-to-run)
-
-[comment]:(I-have-to-add-more-about-the-build-in-terms-of-comp-211-gcc-command)
 
 4. Cargo's subcommand 
 
@@ -216,7 +207,7 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
     cargo run
     ```
 
-    Using ``cargo run`` compiles and runs the code in one step. This differs from using the build command and then running the resulting executable object file separately. 
+    Using ``cargo run`` compiles and runs the code in one step. This differs from using the build command and then running the resulting executable object file separately. It's a convenient shortcut!
 
 
 5. Now that your code is complete, we can push the changes!
