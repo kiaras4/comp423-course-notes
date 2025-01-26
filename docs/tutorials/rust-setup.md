@@ -66,9 +66,9 @@ Perfect! Now both the local and remote repositories are set up! Let's connect th
 
 1. Add GitHub repository as a remote:
 
-```
-git remote add origin https://github.com/<your-username>/hello-comp423-rust.git
-```
+    ```
+    git remote add origin https://github.com/<your-username>/hello-comp423-rust.git
+    ```
 
 Change ``<your-username>`` with the username you have set up in GitHub.
 
@@ -76,9 +76,9 @@ Change ``<your-username>`` with the username you have set up in GitHub.
 
 3. Push local commits to your GitHub repository
 
-```
-git push --set-upstream origin main
-```
+    ```
+    git push --set-upstream origin main
+    ```
 
 4. Using ``git log`` in your terminally will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after reloading it.
 
@@ -221,7 +221,6 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
 #### Congratulations! You ran your first program using Rust!
 
 
-[comment]: (add-note-saying-instructions-inspired-from-423-MkDocs-Tutorial-and-rust-tutorial-info-came-from-https://doc.rust-lang.org/book/ch01-03-hello-cargo.html?highlight=cargo%20new#creating-a-project-with-cargo)  
 !!! note
 
     The intial part of this tutorial was inspired by the "Starting a Static Website Project with MkDocs" page on the Comp423 website. 
