@@ -48,7 +48,7 @@ Let's start with creating the directory and initialize our Git repository.
 
 Now that your local repository is set up, let's create a remote GitHub repository.
 
-1. Log into your GitHub account and head straight to the Create a New Repository page.
+1. Log into your GitHub account and head straight to the Create a New Repository page [here](https://github.com/new).
 
 2. Fill in the following details:
 
