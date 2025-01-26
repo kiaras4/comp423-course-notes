@@ -26,17 +26,17 @@
 
 - **GitHub account**
 
-- **Dev Containers extension for  VS Code**
+- **Dev Containers extension for VS Code**
 
 ## Part 1: Getting Started
 
-Let's start with creating the directory and initialize our Git repositiory.
+Let's start with creating the directory and initialize our Git repository.
 
 1. Open your terminal or command prompt.
 
     By default, you will be in your user's home directory. If you wish you put this in another location, switch into that directory now.
 
-2. Create a new directory for your hello world program.
+2. Create a new directory for your hello COMP423 program.
 
     ```
     mkdir <name-of-directory>
@@ -52,17 +52,33 @@ Let's start with creating the directory and initialize our Git repositiory.
 4. Create a README file:
 
     ```
-    echo "# Hello World in Rust" > README.md
+    echo "# Hello COMP423 in Rust" > README.md
     git add .
     git commit -m "Initial commit with README"
     ```
 
-Now that your local repository is set up, let's connect it to a remote GitHub repository.
+Now that your local repository is set up, let's create a remote GitHub repository.
+
+1. Log into your GitHub account and head straight to the Create a New Repository page.
+
+2. Fill in the following details:
+
+    * **Repository Name:** ``hello-comp423-rust``
+
+    * **Description:**  "Hello COMP423 in Rust"
+
+    * **Visibility:** Public
+
+3. Do not initialize the repository with a README, .gitignore, or license
+
+4. Click **Create Repository**
+
+Perfect! Now both the local and remote repositories are set up! Let's connect them.
 
 1. Add GitHub repository as a remote:
 
 ```
-git remote add origin https://github.com/<your-username>/hello-world-rust.git
+git remote add origin https://github.com/<your-username>/hello-comp423-rust.git
 ```
 
 Change ``<your-username>`` with the username you have set up in GitHub.
@@ -103,7 +119,7 @@ The devcontainer.json file you just created defines the configuration needed for
 
     ```
     {
-        "name": "Rust Hello World",
+        "name": "Rust Hello COMP423",
         "image": "mcr.microsoft.com/vscode/devcontainers/rust:latest"
         "customizations": {
             "vscode": {
@@ -121,18 +137,18 @@ Here we will reopen the project in the container. You can do this by doing ``Ctr
 Once the setup is complete, close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``rustc --version`` to ensure the dev container is running a recent version of Rust. 
 
 
-## Part 3: The Hello World Program!
+## Part 3: The Hello COMP423 Program!
 
-We will be creating your hello world program using Cargo. Cargo is the build system and package manager that Rust uses.
+We will be creating your hello comp423 program using Cargo. Cargo is the build system and package manager that Rust uses.
 
 1. Run these command lines
 
     ```
-    cargo new hello_world --vcs none
+    cargo new hello_comp423 --vcs none
     cd hello_world 
     ```
 
-    The first command creates a new directory & project named hello_world. Cargo will have created one directory, called src, and 2 files, Cargo.toml and main.rs(this one is in the src directory). The second command navigates you into the hello_world directory. ``--vcs none`` prevents the command from creating a git repository, which we have already done. 
+    The first command creates a new directory & project named hello_comp423. Cargo will have created one directory, called src, and 2 files, Cargo.toml and main.rs(this one is in the src directory). The second command navigates you into the hello_comp423 directory. ``--vcs none`` prevents the command from creating a git repository, which we have already done. 
 
     With these lines of code, Cargo has already created the "Hello, World!" in the main.rs file!
 
@@ -174,10 +190,10 @@ We will be creating your hello world program using Cargo. Cargo is the build sys
     To run the compiled source files, run:
 
     ```
-    ./target/debug/hello_world 
+    ./target/debug/hello_comp423 
     ```
 
-    [comment]:(check-if-the-above-command-is-correct-or-if-it's-just-"./hello-world"-to-run)
+    [comment]:(check-if-the-above-command-is-correct-or-if-it's-just-"./hello-comp423"-to-run)
 
 [comment]:(I-have-to-add-more-about-the-build-in-terms-of-comp-211-gcc-command)
 
