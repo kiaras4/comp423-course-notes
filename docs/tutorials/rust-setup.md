@@ -101,7 +101,7 @@ git push --set-upstream origin main
 1. Open the directory you created in VS Code.
     - Can be done like so: File > Open folder
 
-2. Create a .devcontainer directory at the root of the project with a file name "devontainer.json" Path should look like this:
+2. Create a .devcontainer directory at the root of the project with a file name "devcontainer.json" Path should look like this:
 
     ```
     .devcontainer/devcontainer.json
@@ -119,8 +119,8 @@ The devcontainer.json file you just created defines the configuration needed for
 
     ```
     {
-        "name": "Rust Hello COMP423",
-        "image": "mcr.microsoft.com/vscode/devcontainers/rust:latest"
+        "name": "Rust Hello World",
+        "image": "mcr.microsoft.com/vscode/devcontainers/rust:latest",
         "customizations": {
             "vscode": {
                 "settings": {},
@@ -136,21 +136,32 @@ Here we will reopen the project in the container. You can do this by doing ``Ctr
 
 Once the setup is complete, close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``rustc --version`` to ensure the dev container is running a recent version of Rust. 
 
+!!! note
+
+    The version of rust should be something similar to 1.83.0.
+
+
 
 ## Part 3: The Hello COMP423 Program!
 
+We will be creating your hello comp423 program using Cargo. Cargo is the build system and package manager that Rust uses.
 We will be creating your hello comp423 program using Cargo. Cargo is the build system and package manager that Rust uses.
 
 1. Run these command lines
 
     ```
     cargo new hello_comp423 --vcs none
-    cd hello_world 
+    cd hello_comp423
     ```
 
     The first command creates a new directory & project named hello_comp423. Cargo will have created one directory, called src, and 2 files, Cargo.toml and main.rs(this one is in the src directory). The second command navigates you into the hello_comp423 directory. ``--vcs none`` prevents the command from creating a git repository, which we have already done. 
 
     With these lines of code, Cargo has already created the "Hello, World!" in the main.rs file!
+    !!! note
+
+        The main.rs file can be found under src. 
+
+    
 
 2. Changing the message
     
@@ -172,7 +183,7 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
 
 3. Compiling and running the program
 
-    In your hello_world directory and in that terminal, run:
+    In your hello_comp423 directory and in that terminal, run:
 
     ```
     cargo build
@@ -185,7 +196,7 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
     Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs
     ```
 
-    This creates an executable file in target/debug/hello_world(or target/debug/hello_workd.exe on windows). This can also be referred to 
+    This creates an executable file in target/debug/hello_comp423(or target/debug/hello_comp423.exe on windows). This can also be referred to 
 
     To run the compiled source files, run:
 
@@ -220,3 +231,8 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
 
 
 [comment]: (add-note-saying-instructions-inspired-from-423-MkDocs-Tutorial-and-rust-tutorial-info-came-from-https://doc.rust-lang.org/book/ch01-03-hello-cargo.html?highlight=cargo%20new#creating-a-project-with-cargo)  
+!!! note
+
+    The intial part of this tutorial was inspired by the "Starting a Static Website Project with MkDocs" page on the Comp423 website. 
+
+    The documentation that was used to create the Hello Comp423 program was inspired by a website called the "The Rust Programming Language" which can be found here : https://doc.rust-lang.org/book/ch01-03-hello-cargo.html?highlight=cargo%20new#creating-a-project-with-cargo 
