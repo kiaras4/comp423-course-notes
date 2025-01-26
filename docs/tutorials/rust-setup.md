@@ -14,7 +14,7 @@
     The above code block contains a / before the ``` for displaying purposes. The / will not be used in the actual code
 
 
-**Welcome!** This is the tutorial for creating a basic "Hello, World!" using Rust.
+**Welcome!** This is the tutorial for creating a basic "Hello, COMP423!" using Rust.
 
 ## Prerequisites:
 
