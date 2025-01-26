@@ -208,7 +208,14 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
     Using ``cargo run`` compiles and runs the code in one step. This differs from using the build command and then running the resulting executable object file separately. 
 
 
+5. Now that your code is complete, we can push the changes!
 
+    ```
+    git add .
+    git commit -m "Hello COMP423 complete!"
+    git push origin main
+    ```
+    
 #### Congratulations! You ran your first program using Rust!
 
 
