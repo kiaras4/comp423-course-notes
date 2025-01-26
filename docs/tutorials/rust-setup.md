@@ -64,7 +64,7 @@ Now that your local repository is set up, let's create a remote GitHub repositor
 
 Perfect! Now both the local and remote repositories are set up! Let's connect them.
 
-1. Add GitHub repository as a remote:
+1. Back in your terminal, add GitHub repository as a remote:
 
     ```
     git remote add origin https://github.com/<your-username>/hello-comp423-rust.git
@@ -80,7 +80,14 @@ Change ``<your-username>`` with the username you have set up in GitHub.
     git push --set-upstream origin main
     ```
 
-4. Using ``git log`` in your terminally will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after reloading it.
+    !!!question "What is --set-upstream?"
+
+        ``--set-upstream`` causes the remote branch to be tracked by main. This allows future pushes and pulls to be done without adding the branch name to the command. When working on your local main branch, you will be able to use ``git push origin``.
+
+        * The short flag of ``--set-upstream`` is ``-u``.
+
+
+4. Using ``git log`` in your terminal will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after reloading it.
 
 
 ## Part 2: Development(Dev) Container Set Up and Configuration
@@ -136,7 +143,7 @@ Once the setup is complete, close the current terminal tab by pressing the trash
 We will be creating your hello comp423 program using Cargo. Cargo is the build system and package manager that Rust uses.
 We will be creating your hello comp423 program using Cargo. Cargo is the build system and package manager that Rust uses.
 
-1. Run these command lines
+1. Run these command lines in your VS Code terminal:
 
     ```
     cargo new hello_comp423 --vcs none
@@ -193,7 +200,7 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
      
      Both create an executable file that can be run. In the gcc command, you specify the file to be compiled, ``hello_comp423.c``, and names the executable, ``hello_comp423``. The ``-o`` is what allows you to name the executable something other than a.out. On the other hand, Cargo manages the project, so it is able to automatically compile the source files. Cargo's process creates an executable with the same name as the project.
 
-    To run the compiled source files(executable), run:
+    To **run** the compiled source files(executable), run:
 
     ```
     ./target/debug/hello_comp423 
@@ -221,8 +228,8 @@ We will be creating your hello comp423 program using Cargo. Cargo is the build s
 #### Congratulations! You ran your first program using Rust!
 
 
-!!! note
+!!! info
 
-    The intial part of this tutorial was inspired by the "Starting a Static Website Project with MkDocs" page on the Comp423 website. 
+    The intial part of this tutorial was inspired by the "Starting a Static Website Project with MkDocs by Kris Jordan" page on the Comp423 website. 
 
     The documentation that was used to create the Hello Comp423 program was inspired by a website called the "The Rust Programming Language" which can be found here : https://doc.rust-lang.org/book/ch01-03-hello-cargo.html?highlight=cargo%20new#creating-a-project-with-cargo 
