@@ -24,9 +24,11 @@
 
 - **Git installed**
 
+- **GitHub account**
+
 - **Dev Containers extension for  VS Code**
 
-##Part 1: Getting Started
+## Part 1: Getting Started
 
 Let's start with creating the directory and initialize our Git repositiory.
 
@@ -55,7 +57,25 @@ Let's start with creating the directory and initialize our Git repositiory.
     git commit -m "Initial commit with README"
     ```
 
-[comment]: (add-note-saying-instructions-inspired-from-423-MkDocs-Tutorial)  
+Now that your local repository is set up, let's connect it to a remote GitHub repository.
+
+1. Add GitHub repository as a remote:
+
+```
+git remote add origin https://github.com/<your-username>/hello-world-rust.git
+```
+
+Change ``<your-username>`` with the username you have set up in GitHub.
+
+2. Ensure your default branch name is ``main`` by using ``git branch`` in your terminal. If it's not ``main``, rename it using ``git branch -M main``.
+
+3. Push local commits to your GitHub repository
+
+```
+git push --set-upstream origin main
+```
+
+4. Using ``git log`` in your terminally will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after reloading it.
 
 
 ## Part 2: Development(Dev) Container Set Up and Configuration
@@ -94,7 +114,7 @@ The devcontainer.json file you just created defines the configuration needed for
     }
     ```
 
-### Post-Configuration- Reopen Project in a VS Code Dev Container
+### Post-Configuration - Reopen Project in a VS Code Dev Container
 
 Here we will reopen the project in the container. You can do this by doing ``Ctrl+Shift+P`` (or ``Cmd+Shift+P`` on Mac), then type "Dev Containers: Reopen in Container," selecting the option once it comes up. The image will be downloaded and any requirements installed. It may take a few minutes.
 
@@ -103,8 +123,77 @@ Once the setup is complete, close the current terminal tab by pressing the trash
 
 ## Part 3: The Hello World Program!
 
+We will be creating your hello world program using Cargo. Cargo is the build system and package manager that Rust uses.
+
+1. Run these command lines
+
+    ```
+    cargo new hello_world --vcs none
+    cd hello_world 
+    ```
+
+    The first command creates a new directory & project named hello_world. Cargo will have created one directory, called src, and 2 files, Cargo.toml and main.rs(this one is in the src directory). The second command navigates you into the hello_world directory. ``--vcs none`` prevents the command from creating a git repository, which we have already done. 
+
+    With these lines of code, Cargo has already created the "Hello, World!" in the main.rs file!
+
+2. Changing the message
+    
+    Navigate to the main.rs file. There, you should see this code already generated:
+
+    ```
+    fn main() {
+        println!("Hello, World!");
+    }
+    ```
+
+    - Change the message in the double quotes to say "Hello COMP423" The resulting code should look like this:
+
+    ```
+    fn main() {
+        println!("Hello COMP423");
+    }
+    ```
+
+3. Compiling and running the program
+
+    In your hello_world directory and in that terminal, run:
+
+    ```
+    cargo build
+    ```
+
+    You should see this output, or something similar:
+
+    ```
+    Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs
+    ```
+
+    This creates an executable file in target/debug/hello_world(or target/debug/hello_workd.exe on windows). This can also be referred to 
+
+    To run the compiled source files, run:
+
+    ```
+    ./target/debug/hello_world 
+    ```
+
+    [comment]:(check-if-the-above-command-is-correct-or-if-it's-just-"./hello-world"-to-run)
+
+[comment]:(I-have-to-add-more-about-the-build-in-terms-of-comp-211-gcc-command)
+
+4. Cargo's subcommand 
+
+    Run:
+
+    ```
+    cargo run
+    ```
+
+    Using ``cargo run`` compiles and runs the code in one step. This differs from using the build command and then running the resulting executable object file separately. 
 
 
 
+#### Congratulations! You ran your first program using Rust!
 
 
+[comment]: (add-note-saying-instructions-inspired-from-423-MkDocs-Tutorial-and-rust-tutorial-info-came-from-https://doc.rust-lang.org/book/ch01-03-hello-cargo.html?highlight=cargo%20new#creating-a-project-with-cargo)  
